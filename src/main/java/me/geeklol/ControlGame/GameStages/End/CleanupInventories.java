@@ -1,4 +1,4 @@
 package me.geeklol.ControlGame.GameStages.End;
 
-public class CleanupEnventories {
+public class CleanupInventories {
 }

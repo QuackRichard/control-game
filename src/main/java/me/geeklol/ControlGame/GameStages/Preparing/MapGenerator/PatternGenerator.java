@@ -5,12 +5,11 @@ import java.util.List;
 import java.util.Random;
 
 public class PatternGenerator {
-
-    public PatternGenerator(List<Integer> offset) {
+    public PatternGenerator() {
 
     }
 
-    private List<Integer> offsetGenerator(int playerCount) {
+    public List<Integer> offsetGenerator() {
         List<Integer> offset = new ArrayList<>();
 
         Random random = new Random();
