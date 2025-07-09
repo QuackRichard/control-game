@@ -1,0 +1,6 @@
+name: ControlGame
+version: '1.0-SNAPSHOT'
+main: me.geeklol.ControlGame.ControlGame
+api-version: '1.21'
+authors: [ geeklol ]
+description: Engine
