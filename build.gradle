@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.5-R0.1-SNAPSHOT")
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
 }
 
 tasks {
@@ -47,6 +48,10 @@ tasks.withType(JavaCompile).configureEach {
     if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
         options.release.set(targetJavaVersion)
     }
+}
+
+jar {
+    destinationDirectory.set(file("C:\\Users\\s1mpl\\headHunter\\plugins"))
 }
 
 processResources {

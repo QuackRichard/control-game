@@ -15,7 +15,7 @@ public class PatternGenerator {
         Random random = new Random();
 
         for (int i = 0; i < 15; i++) {
-            offset.set(i, random.nextInt(4) + 1);
+            offset.add(random.nextInt(4) + 1);
         }
 
         return offset;

@@ -3,4 +3,9 @@ version: '1.0-SNAPSHOT'
 main: me.geeklol.ControlGame.ControlGame
 api-version: '1.21'
 authors: [ geeklol ]
-description: Engine
+description: Control game
+
+commands:
+  create:
+    usage: /<command>
+    aliases: dp
