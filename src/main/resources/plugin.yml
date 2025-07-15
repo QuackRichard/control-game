@@ -6,6 +6,6 @@ authors: [ geeklol ]
 description: Control game
 
 commands:
-  create:
-    usage: /<command>
+  drawpattern:
+    usage: /<command> <x> <y> <z> <type corner if draw with corner mask>
     aliases: dp
