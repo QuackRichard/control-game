@@ -52,7 +52,7 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 jar {
-    destinationDirectory.set(file("C:\\mc-server\\plugins4"))
+    destinationDirectory.set(file("C:\\mc-server\\plugins"))
 }
 
 processResources {
