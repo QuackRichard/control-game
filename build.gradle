@@ -63,5 +63,3 @@ processResources {
         expand props
     }
 }
-
-//meow 2
