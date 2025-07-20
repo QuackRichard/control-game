@@ -1,5 +1,8 @@
 package me.geeklol.ControlGame.GameStages.Preparing.MapGenerator.Commands;
 
+import me.geeklol.ControlGame.GameStages.Preparing.MapGenerator.DrawHexagon;
+import me.geeklol.ControlGame.GameStages.Preparing.MapGenerator.DrawLineBetweenHexagons;
+import me.geeklol.ControlGame.GameStages.Preparing.MapGenerator.SpawnArmorStands;
 import me.geeklol.ControlGame.GameStages.Preparing.MapGenerator.TwoPlayersPatterns;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -13,10 +16,7 @@ import org.bukkit.util.BoundingBox;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
-import java.util.stream.Collectors;
 
 
 public class DrawPattern implements CommandExecutor {
@@ -77,8 +77,28 @@ public class DrawPattern implements CommandExecutor {
                 spawnCursor.setX(originX + j);
                 spawnCursor.setZ(originZ + i);
                 spawnCursor.getBlock().setType(material);
+                if (material.equals(Material.LAPIS_BLOCK)) {
+                    DrawHexagon drawHexagon = new DrawHexagon(player, originX + j + 0.525, y + 1, originZ + i + 0.525, 0.5);
+//                    SpawnArmorStands spawnArmorStands = new SpawnArmorStands(player, originX + j + 0.5, y + 1, originZ + i + 0.5);
+                }
             }
         }
+
+        // Проход по уже всем напечатанным блокам
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                spawnCursor.setX(originX + j);
+                spawnCursor.setZ(originZ + i);
+
+                if (spawnCursor.getBlock().getType() == Material.LAPIS_BLOCK) {
+                    DrawLineBetweenHexagons drawLineBetweenHexagons = new DrawLineBetweenHexagons(player, originX + j, y, originZ);
+                }
+            }
+        }
+    }
+
+    public void setBlock() {
+
     }
 
     public void reduceRedstoneBlocksAmount(World world, double x, double y, double z) {
@@ -92,7 +112,7 @@ public class DrawPattern implements CommandExecutor {
             line.add(world.getBlockAt(block.getLocation()));
         }
 
-        System.out.println(line);
+//        System.out.println(line);
 
 //        Random random = new Random();
 //        for (int i = 0; i < line.size(); i++) {
