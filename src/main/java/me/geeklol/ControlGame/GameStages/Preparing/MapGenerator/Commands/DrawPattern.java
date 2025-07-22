@@ -2,7 +2,6 @@ package me.geeklol.ControlGame.GameStages.Preparing.MapGenerator.Commands;
 
 import me.geeklol.ControlGame.GameStages.Preparing.MapGenerator.DrawHexagon;
 import me.geeklol.ControlGame.GameStages.Preparing.MapGenerator.DrawLineBetweenHexagons;
-import me.geeklol.ControlGame.GameStages.Preparing.MapGenerator.SpawnArmorStands;
 import me.geeklol.ControlGame.GameStages.Preparing.MapGenerator.TwoPlayersPatterns;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -79,7 +78,6 @@ public class DrawPattern implements CommandExecutor {
                 spawnCursor.getBlock().setType(material);
                 if (material.equals(Material.LAPIS_BLOCK)) {
                     DrawHexagon drawHexagon = new DrawHexagon(player, originX + j + 0.525, y + 1, originZ + i + 0.525, 0.5);
-//                    SpawnArmorStands spawnArmorStands = new SpawnArmorStands(player, originX + j + 0.5, y + 1, originZ + i + 0.5);
                 }
             }
         }
@@ -97,10 +95,6 @@ public class DrawPattern implements CommandExecutor {
         }
     }
 
-    public void setBlock() {
-
-    }
-
     public void reduceRedstoneBlocksAmount(World world, double x, double y, double z) {
         BoundingBox boundingBox = new BoundingBox(x, y, z + 18.0, x + 18.0, y, z + 18.0);
         Block endBlock = boundingBox.getMax().toLocation(world).getBlock();
@@ -111,23 +105,5 @@ public class DrawPattern implements CommandExecutor {
             Block block = new Location(world, x + i, y, z + difference).toBlockLocation().getBlock();
             line.add(world.getBlockAt(block.getLocation()));
         }
-
-//        System.out.println(line);
-
-//        Random random = new Random();
-//        for (int i = 0; i < line.size(); i++) {
-//            int randomNum = random.nextInt(4 - 1 + 1) + 1;
-//            Block block = line.get(i);
-//            Material material = line.get(i).getType();
-//            if (material != Material.REDSTONE_BLOCK) {
-//                line.remove(block);
-//            } else {
-//                if (randomNum == 2) {
-//                    line.remove(block);
-//                    System.out.println(randomNum);
-//                }
-//            }
-//        }
-//        System.out.println(line);
     }
 }
