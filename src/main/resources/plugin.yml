@@ -9,3 +9,15 @@ commands:
   drawpattern:
     usage: /<command> <x> <y> <z> <type corner if draw with corner mask>
     aliases: dp
+  spawnboard:
+    usage: /<command> <second player name>
+    aliases: sb
+  jointeam:
+    usage: /join <team name red or blue>
+  ap:
+    usage: /ap
+  vap:
+    usage: /vap
+  deleteapg:
+    usage: /deleteapg
+    aliases: del

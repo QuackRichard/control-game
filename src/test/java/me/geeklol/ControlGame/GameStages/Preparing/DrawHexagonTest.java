@@ -1,4 +1,4 @@
-package me.geeklol.ControlGame.GameStages.Preparing.MapGenerator;
+package me.geeklol.ControlGame.GameStages.Preparing;
 
 import org.bukkit.Bukkit;
 import org.bukkit.World;

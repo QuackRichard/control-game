@@ -1,13 +1,11 @@
-package me.geeklol.ControlGame.GameStages.Preparing.MapGenerator;
+package me.geeklol.ControlGame.GameStages.Preparing;
 
-public class  TwoPlayersPatterns {
-    public TwoPlayersPatterns() { }
-
+public class Patterns {
     // 0 - snow
     // 1 - lapis
     // 2 - stone
     // 3 - redstone block
-    public Integer[][] getMatrix() {
+    public static Integer[][] getMatrix1vs1() {
         return new Integer[][] {
                 {1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 },
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -27,11 +25,11 @@ public class  TwoPlayersPatterns {
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
                 {1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 },
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                {0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0 },
+                {0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0 },
         };
     }
 
-    public Integer[][] getCorner() {
+    public static Integer[][] getCorner() {
         return new Integer[][] {
                 {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },
                 {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },
@@ -55,7 +53,7 @@ public class  TwoPlayersPatterns {
         };
     }
 
-    public Integer[][] getMask1() {
+    public static Integer[][] getMask1() {
         return new Integer[][] {
                 {1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 },
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -78,7 +76,7 @@ public class  TwoPlayersPatterns {
                 {0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0 },
         };
     }
-    public Integer[][] getMask2() {
+    public static Integer[][] getMask2() {
         return new Integer[][] {
                 {1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 },
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
